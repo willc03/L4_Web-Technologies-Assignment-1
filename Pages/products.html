@@ -1,0 +1,55 @@
+<!--
+    Author: Will Corkill
+    Name: products.html
+    Last Accessed: 24/11/2021
+    Description: The page displaying all of the products to the user.
+-->
+<!DOCTYPE html>
+<html lang="en"> <!-- Language is specified to increase SEO. -->
+    <head> <!-- Content invisible to the user -->
+        <title>Products - UCLan Student's Union Shop</title> <!-- Sets the name of the tab in the browser -->
+        <link type="text/css" rel="stylesheet" href="../Stylesheets/HeaderFooter.css"> <!-- Style the header & footer of the page -->
+        <link type="text/css" rel="stylesheet" href="../Stylesheets/products.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" charset="utf-8"> <!-- Enable media queries & define charset -->
+        <script src="../Scripts/loadProducts.js"></script>
+    </head> 
+    <body>
+        <div id="header"> <!-- Defines the top of the page -->
+            <a href="index.html"> <!-- Allows the UCLan logo to act as a button -->
+                <img id="uclan_logo" src="../Images/uclan_logo.png" alt="University of Central Lancashire Logo">
+            </a>
+            <h2 id="title">Student Shop</h2>
+            <input type="image" id="mobileMenu" src="../Images/HamburgerMenu.svg" onmouseup="onMenuMouseDown()">
+            <nav id="navigation">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+            </nav>
+        </div>
+        <div id="main">
+            <p id="quick_scroller">products > <a href="#Hoodie">hoodies</a> <a href="#Jumper">jumpers</a> <a href="#Tshirt">t-shirts</a></p>
+            <div id="Hoodie"></div>
+            <div id="Jumper"></div>
+            <div id="Tshirt"></div>
+        </div>
+        <footer> <!-- Defines the bottom of the page, containing all information about the website and company. -->
+            <div class="Links">
+                <h3 class="category">Links</h3>
+                <a href="https://www.uclansu.co.uk">Student's Union</a>
+            </div>
+            <div class="Contact">
+                <h3 class="category">Contact</h3>
+                <p>Email: <a href="mailto:suinformation@uclan.ac.uk">suinformation@uclan.ac.uk</a></p> <!-- mailto will open the user's email client when pressed -->
+                <p>Phone: <a href="tel:01772893000">01772 893000</a></p> <!-- tel will ask the user if they want to phone the number, if available -->
+            </div>
+            <div class="Location">
+                <h3 class="category">Location</h3>
+                <p>University of Central Lancashire Student's Union</p>
+                <p>Fylde Road, Preston, PR1 7BY</p>
+                <p>Registered in England</p>
+                <p>Company Number: 7623917</p>
+                <p>Registered Charity Number: 1142616</p>
+            </div>
+        </footer>
+    </body>
+</html>

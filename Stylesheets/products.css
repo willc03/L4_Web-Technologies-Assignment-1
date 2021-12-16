@@ -1,0 +1,46 @@
+
+img:not(#uclan_logo) {
+    width: 100%;
+}
+#quick_scroller {
+    width: 100%; /* Preserve the list of products by manually setting the width to 100% */
+}
+#main {
+    width: 75%;
+    margin: auto;
+}
+#Hoodie, #Jumper, #Tshirt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+/* Set the style of the product containers */
+.productContainer {
+    width: 25%;
+    margin: 1.5%;
+    border: 2px solid #f3f3f3;
+    background-color: #f3f3f3;
+}
+.productContainer h2 {
+    color: #f2be1a;
+    margin: 0% 5%;
+}
+.productContainer h2:not(:last-of-type) {
+    margin-top: 5%;
+}
+.productDescription {
+   font-size: 0.8em;
+   margin-left: 5%;
+   margin-right: 5%;
+   text-align: justify; 
+}
+.productPrice {
+    margin-left: 5%;
+    padding-right: 100%;
+}
+input {
+    width: 25%;
+    display: block;
+    margin: 5% auto 5%;
+}
