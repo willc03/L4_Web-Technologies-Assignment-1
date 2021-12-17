@@ -1,0 +1,46 @@
+
+img:not(#uclan_logo) {
+    width: 100%;
+}
+#main { /* Make a single column in the centre of the page to place all main content */
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2.5%;
+}
+/* Set the style of the product containers */
+.productContainer {
+    width: 100%;
+    margin: 1.5%;
+    border: 2px solid #f3f3f3;
+    background-color: #f3f3f3;
+}
+.productContainer h2 {
+    color: #f2be1a;
+    margin: 0% 5%;
+}
+.productContainer h2:not(:last-of-type) {
+    margin-top: 5%;
+}
+.productDescription {
+   font-size: 0.8em;
+   margin-left: 5%;
+   margin-right: 5%;
+   text-align: justify; 
+}
+.productPrice {
+    margin-left: 5%;
+    padding-right: 100%;
+}
+#purchase_input {
+    width: 25%;
+    display: block;
+    margin: 5% auto 5%;
+}
+#main a {
+    font-size: 0.8em;
+    margin-left: 5%;
+}
+.new_line::after { /* https://www.educative.io/edpresso/how-to-add-a-line-break-using-css */
+    content: "\a\a";
+    white-space: pre;
+}
