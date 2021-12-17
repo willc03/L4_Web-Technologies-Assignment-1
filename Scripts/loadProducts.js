@@ -658,6 +658,7 @@ window.onload = function() {
         var buyButton = document.createElement('input');
         buyButton.type = "button";
         buyButton.value = "Buy";
+        buyButton.setAttribute("id", "purchase_input")
         buyButton.setAttribute("onclick", "alert(\"Added to cart\")")
         div.appendChild(buyButton);
         // Place the div and all interior content on the page.
