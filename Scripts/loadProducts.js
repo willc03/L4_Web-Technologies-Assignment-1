@@ -129,6 +129,52 @@ const products = {
     }
 }
 
+function generateProductDiv(productContainer, productType, productColour, showReadMore) {
+    // Create a div to store the product information in
+    var productDiv = document.createElement("div");
+    productDiv.setAttribute("class", "productContainer");
+    // Create an image tag to show the corresponding image for the colour
+    var productImage = document.createElement("img");
+    productImage.src = `../Images/${productType}/${productColour}.jpg`;
+    productDiv.appendChild(productImage);
+    // Add a heading for the product type
+    var productTypeHeading = document.createElement("h2");
+    productTypeHeading.textContent = productType;
+    productDiv.appendChild(productTypeHeading);
+    // Add a heading for the product colour
+    var productColourHeading = document.createElement("h2");
+    productColourHeading.textContent = productColour;
+    productDiv.appendChild(productColourHeading);
+    // Add a paragraph to contain the description
+    var productDescription = document.createElement("p");
+    productDescription.setAttribute("class", "productDescription");
+    productDescription.textContent = products[productType].description;
+    productDiv.appendChild(productDescription);
+    // Add an anchor tag to 'read more' about the item
+    if (showReadMore) {
+        var productReadMore = document.createElement("a");
+        productReadMore.innerHTML = "Read more...";
+        productReadMore.href = "./item.html";
+        productReadMore.setAttribute("onclick", `readMore("${productType}", "${productColour}")`);
+        productReadMore.setAttribute("class", "new_line");
+        productDiv.appendChild(productReadMore);
+    }
+    // Add a strong tag to emphasise the price of the item
+    var productPrice = document.createElement("strong");
+    productPrice.setAttribute("class", "productPrice");
+    productPrice.textContent = products[productType].price;
+    productDiv.appendChild(productPrice);
+    // Add a button to add the product to the cart
+    var purchaseButton = document.createElement("input");
+    purchaseButton.type = "button";
+    purchaseButton.value = "Buy";
+    purchaseButton.setAttribute("id", "purchase_input");
+    purchaseButton.setAttribute("onclick", `readMore("${productType}", "${productColour}")`); // Temporarily use readMore here instead of addToCart
+    productDiv.appendChild(purchaseButton);
+    // Place the div on the page
+    productContainer.appendChild(productDiv);
+}
+
 function readMore(productType, productColour) { // Function to allow the user to access item.html through a read more button.
     sessionStorage.setItem(`UCLAN_STORE_PRODUCT_TYPE`, productType);
     sessionStorage.setItem(`UCLAN_STORE_PRODUCT_COLOUR`, productColour);
@@ -139,50 +185,24 @@ function addToCart(productType, productColour) {
 }
 
 window.onload = function() {
-    for (const productType in products) {
-        products[productType].colors.forEach(function(colour) {
-            const productContainer = document.getElementById(productType);
-            // Create a div to store the product information in
-            var productDiv = document.createElement("div");
-            productDiv.setAttribute("class", "productContainer");
-            // Create an image tag to show the corresponding image for the colour
-            var productImage = document.createElement("img");
-            productImage.src = `../Images/${productType}/${colour}.jpg`;
-            productDiv.appendChild(productImage);
-            // Add a heading for the product type
-            var productTypeHeading = document.createElement("h2");
-            productTypeHeading.textContent = productType;
-            productDiv.appendChild(productTypeHeading);
-            // Add a heading for the product colour
-            var productColourHeading = document.createElement("h2");
-            productColourHeading.textContent = colour;
-            productDiv.appendChild(productColourHeading);
-            // Add a paragraph to contain the description
-            var productDescription = document.createElement("p");
-            productDescription.setAttribute("class", "productDescription");
-            productDescription.textContent = products[productType].description;
-            productDiv.appendChild(productDescription);
-            // Add an anchor tag to 'read more' about the item
-            var productReadMore = document.createElement("a");
-            productReadMore.innerHTML = "Read more...";
-            productReadMore.href = "./item.html";
-            productReadMore.setAttribute("onclick", `readMore("${productType}", "${colour}")`);
-            productReadMore.setAttribute("class", "new_line");
-            productDiv.appendChild(productReadMore);
-            // Add a strong tag to emphasise the price of the item
-            var productPrice = document.createElement("strong");
-            productPrice.setAttribute("class", "productPrice");
-            productPrice.textContent = products[productType].price;
-            productDiv.appendChild(productPrice);
-            // Add a button to add the product to the cart
-            var purchaseButton = document.createElement("input");
-            purchaseButton.type = "button";
-            purchaseButton.value = "Buy";
-            purchaseButton.setAttribute("id", "purchase_input");
-            purchaseButton.setAttribute("onclick", `readMore("${productType}", "${colour}")`); // Temporarily use readMore here instead of addToCart
-            productDiv.appendChild(purchaseButton);
-            // Place the div on the page
-            productContainer.appendChild(productDiv);
-        });
-    };
+    /*
+    The script will be used on multiple pages,  the start behaviour will
+    be  different  on  the  products  and item pages, so an if statement
+    will  be  used  to  change  the  behaviour based on the page's name.
+    */
+    var currentPageName = location.href.split("/").slice(-1);
+    if (currentPageName == "products.html")
+    {
+        for (const productType in products) {
+            products[productType].colors.forEach(function(colour) {
+                const productContainer = document.getElementById(productType);
+                generateProductDiv(productContainer, productType, colour, true);
+            });
+        };
+    }
+    else
+    {
+        const productContainer = document.getElementById("main");
+        generateProductDiv(productContainer, sessionStorage.getItem("UCLAN_STORE_PRODUCT_TYPE"), sessionStorage.getItem("UCLAN_STORE_PRODUCT_COLOUR"), false);
+    }
 };
