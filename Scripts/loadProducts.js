@@ -191,7 +191,7 @@ window.onload = function() {
     will  be  used  to  change  the  behaviour based on the page's name.
     */
     var currentPageName = location.href.split("/").slice(-1);
-    if (currentPageName == "products.html")
+    if (currentPageName[0].search("products.html") != -1)
     {
         for (const productType in products) {
             products[productType].colors.forEach(function(colour) {
