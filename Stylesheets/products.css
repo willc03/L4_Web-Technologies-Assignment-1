@@ -48,7 +48,7 @@ img:not(#uclan_logo) {
     font-size: 0.8em;
     margin-left: 5%;
 }
-.new_line::after { /* https://www.educative.io/edpresso/how-to-add-a-line-break-using-css /*
+.new_line::after { /* https://www.educative.io/edpresso/how-to-add-a-line-break-using-css */
     content: "\a\a";
     white-space: pre;
 }
