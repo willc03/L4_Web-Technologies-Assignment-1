@@ -129,6 +129,15 @@ const products = {
     }
 }
 
+function readMore(productType, productColour) { // Function to allow the user to access item.html through a read more button.
+    sessionStorage.setItem(`UCLAN_STORE_PRODUCT_TYPE`, productType);
+    sessionStorage.setItem(`UCLAN_STORE_PRODUCT_COLOUR`, productColour);
+    window.location.href = `../Pages/item.html`;
+}
+function addToCart(productType, productColour) {
+    // Function to be written for adding to the cart
+}
+
 window.onload = function() {
     for (const productType in products) {
         products[productType].colors.forEach(function(colour) {
@@ -163,7 +172,7 @@ window.onload = function() {
             purchaseButton.type = "button";
             purchaseButton.value = "Buy";
             purchaseButton.setAttribute("id", "purchase_input");
-            purchaseButton.setAttribute("onclick", "alert(\"Added to cart\")");
+            purchaseButton.setAttribute("onclick", `readMore("${productType}", "${colour}")`); // Temporarily use readMore here instead of addToCart
             productDiv.appendChild(purchaseButton);
             // Place the div on the page
             productContainer.appendChild(productDiv);
