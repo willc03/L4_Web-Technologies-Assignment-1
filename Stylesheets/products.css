@@ -39,8 +39,22 @@ img:not(#uclan_logo) {
     margin-left: 5%;
     padding-right: 100%;
 }
-input {
+#purchase_input {
     width: 25%;
     display: block;
     margin: 5% auto 5%;
+}
+/*
+This section of CSS will be used to style the
+button which will scroll to the top of the page
+when pressed by the end-user.
+*/
+#top_scroller {
+    border-radius: 50%; /* Used to make the button round */
+    padding: 2%; /* Padding is needed to make the button more prominent */
+    background-color: #577a9b;
+    position: fixed; /* A fixed position is used to keep the button on the screen at all times */
+    left: 10px; /* A static unit of measurement has been used as only a small inset is required */
+    top: 45%; /* Dictate how far from the top of the screen the button should be placed */
+    color: white;
 }
