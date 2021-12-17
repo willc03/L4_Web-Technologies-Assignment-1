@@ -44,6 +44,14 @@ img:not(#uclan_logo) {
     display: block;
     margin: 5% auto 5%;
 }
+#main a {
+    font-size: 0.8em;
+    margin-left: 5%;
+}
+.new_line::after { /* https://www.educative.io/edpresso/how-to-add-a-line-break-using-css /*
+    content: "\a\a";
+    white-space: pre;
+}
 /*
 This section of CSS will be used to style the
 button which will scroll to the top of the page

@@ -162,6 +162,13 @@ window.onload = function() {
             productDescription.setAttribute("class", "productDescription");
             productDescription.textContent = products[productType].description;
             productDiv.appendChild(productDescription);
+            // Add an anchor tag to 'read more' about the item
+            var productReadMore = document.createElement("a");
+            productReadMore.innerHTML = "Read more...";
+            productReadMore.href = "./item.html";
+            productReadMore.setAttribute("onclick", `readMore("${productType}", "${colour}")`);
+            productReadMore.setAttribute("class", "new_line");
+            productDiv.appendChild(productReadMore);
             // Add a strong tag to emphasise the price of the item
             var productPrice = document.createElement("strong");
             productPrice.setAttribute("class", "productPrice");
