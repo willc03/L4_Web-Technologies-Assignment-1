@@ -6,7 +6,7 @@ img:not(#uclan_logo) {
     width: 100%; /* Preserve the list of products by manually setting the width to 100% */
 }
 #main { /* Make a single column in the centre of the page to place all main content */
-    width: 75%;
+    width: 65%;
     margin: auto;
 }
 #Hoodie, #Jumper, #Tshirt {

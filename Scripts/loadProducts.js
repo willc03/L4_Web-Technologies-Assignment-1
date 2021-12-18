@@ -182,6 +182,7 @@ function readMore(productType, productColour) { // Function to allow the user to
 }
 function addToCart(productType, productColour) {
     // Function to be written for adding to the cart
+    
 }
 
 window.onload = function() {
