@@ -1,0 +1,14 @@
+
+#main {
+    width: 60%;
+    margin: auto;
+}
+#main h2 {
+    color: #f2be1a;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
