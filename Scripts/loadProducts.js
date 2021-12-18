@@ -169,7 +169,7 @@ function generateProductDiv(productContainer, productType, productColour, showRe
     purchaseButton.type = "button";
     purchaseButton.value = "Buy";
     purchaseButton.setAttribute("id", "purchase_input");
-    purchaseButton.setAttribute("onclick", `readMore("${productType}", "${productColour}")`); // Temporarily use readMore here instead of addToCart
+    purchaseButton.setAttribute("onclick", `addToCart("${productType}", "${productColour}")`); // Temporarily use readMore here instead of addToCart
     productDiv.appendChild(purchaseButton);
     // Place the div on the page
     productContainer.appendChild(productDiv);
@@ -182,7 +182,9 @@ function readMore(productType, productColour) { // Function to allow the user to
 }
 function addToCart(productType, productColour) {
     // Function to be written for adding to the cart
-    
+    const numberOfKeys = Object.keys(localStorage).length;
+    localStorage.setItem(`item${numberOfKeys}`, `${productType},${productColour}`);
+    alert(`${productColour} ${productType} has been added to your cart.`);
 }
 
 window.onload = function() {
