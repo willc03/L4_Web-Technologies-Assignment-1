@@ -15,26 +15,28 @@
         <script src="../Scripts/loadProducts.js"></script>
     </head> 
     <body>
-        <div id="header"> <!-- Defines the top of the page -->
-            <a href="index.html"> <!-- Allows the UCLan logo to act as a button -->
-                <img id="uclan_logo" src="../Images/uclan_logo.png" alt="University of Central Lancashire Logo">
-            </a>
-            <h2 id="title">Student Shop</h2>
-            <input type="image" id="mobileMenu" src="../Images/HamburgerMenu.svg" onmouseup="onMenuMouseDown()">
-            <nav id="navigation">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="cart.html">Cart</a>
-            </nav>
+        <div id="content-wrapper">
+            <div id="header"> <!-- Defines the top of the page -->
+                <a href="index.html"> <!-- Allows the UCLan logo to act as a button -->
+                    <img id="uclan_logo" src="../Images/uclan_logo.png" alt="University of Central Lancashire Logo">
+                </a>
+                <h2 id="title">Student Shop</h2>
+                <input type="image" id="mobileMenu" src="../Images/HamburgerMenu.svg" onmouseup="onMenuMouseDown()">
+                <nav id="navigation">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="cart.html">Cart</a>
+                </nav>
+            </div>
+            <div id="main">
+                <p id="quick_scroller">products > <a href="#Hoodie">hoodies</a> <a href="#Jumper">jumpers</a> <a href="#Tshirt">t-shirts</a></p>
+                <div id="Hoodie"></div>
+                <div id="Jumper"></div>
+                <div id="Tshirt"></div>
+                <input type="button" id="top_scroller" value="Top" onclick="window.scrollTo({top: 0})"> <!-- Add a button to take the user back to the top of the page. -->
+            </div>
         </div>
-        <div id="main">
-            <p id="quick_scroller">products > <a href="#Hoodie">hoodies</a> <a href="#Jumper">jumpers</a> <a href="#Tshirt">t-shirts</a></p>
-            <div id="Hoodie"></div>
-            <div id="Jumper"></div>
-            <div id="Tshirt"></div>
-            <input type="button" id="top_scroller" value="Top" onclick="window.scrollTo({top: 0})"> <!-- Add a button to take the user back to the top of the page. -->
-        </div>
-        <footer> <!-- Defines the bottom of the page, containing all information about the website and company. -->
+        <footer id="footer"> <!-- Defines the bottom of the page, containing all information about the website and company. -->
             <div class="Links">
                 <h3 class="category">Links</h3>
                 <a href="https://www.uclansu.co.uk">Student's Union</a>
