@@ -61,10 +61,11 @@ footer {
     background-color: #34516c;
     display: flex;
     justify-content: space-around;
-    bottom: 1%;
+    bottom: 0%;
     flex-wrap: wrap;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
+    margin-top: 2.5%;
 }
 footer h3 {
     color: white;
