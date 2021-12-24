@@ -57,7 +57,7 @@ function createRow(itemKey, localStorageValue) {
 
 window.onload = function() {
     tableContainer = document.getElementById("table");
-    const storageKeys = Object.keys(localStorage);
+    const storageKeys = Object.keys(localStorage).sort();
     for (const key in storageKeys) {
         const itemKey = storageKeys[key];
         const itemValue = localStorage.getItem(itemKey);
