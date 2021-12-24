@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: loadCart.js
-    Last Accessed: 18/12/2021
+    Last Accessed: 24/12/2021
     Description: Manipulate the DOM to display all products in the cart.
 */
 const prices = {Hoodie: "£39.99", Jumper: "£29.99", Tshirt: "£19.99"}
