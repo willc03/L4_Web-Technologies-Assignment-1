@@ -3,7 +3,7 @@ img:not(#uclan_logo) {
     width: 100%;
 }
 #main { /* Make a single column in the centre of the page to place all main content */
-    width: 80%;
+    width: 60%;
     margin: auto;
     margin-bottom: 2.5%;
 }
