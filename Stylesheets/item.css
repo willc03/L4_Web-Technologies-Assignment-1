@@ -35,6 +35,15 @@ img:not(#uclan_logo) {
     width: 25%;
     display: block;
     margin: 5% auto 5%;
+    color: #be1622;
+    border: 2px solid #be1622;
+    background-color: white;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+#purchase_input:hover {
+    background-color: #be1622;
+    color: white;
 }
 #main a {
     font-size: 0.8em;
