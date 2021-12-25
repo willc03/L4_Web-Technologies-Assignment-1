@@ -75,6 +75,13 @@ when pressed by the end-user.
     top: 45%; /* Dictate how far from the top of the screen the button should be placed */
     color: white;
     border: none;
+    transition-duration: 0.5s;
+    border: 0px solid #577a9b;
+}
+#top_scroller:hover {
+    color: #577a9b;
+    border: 2px solid #577a9b;
+    background-color: white;
 }
 
 /* Next, define the tablet bahaviour */
