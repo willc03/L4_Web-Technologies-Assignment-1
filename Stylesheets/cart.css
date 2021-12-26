@@ -40,3 +40,6 @@ button:hover {
     margin: auto 0;
     justify-content: space-around;
 }
+.noItems {
+    text-align: center;
+}
