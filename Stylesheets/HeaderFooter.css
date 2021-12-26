@@ -1,14 +1,46 @@
 /*
     Author: Will Corkill
     Name: HeaderFooter.css
-    Last Accessed: 24/11/2021
+    Last Accessed: 26/12/2021
     Description: Set some global information for the website, as well as the header and footer for each page.
 */
-/* First, define the default behaviour */
-body { /* Globally apply some settings in the website */
-    margin: 0%;
+/* 
+First, define the default behaviour, i.e. behaviour of PCs, laptops.
+The first section of CSS is used to define the sticky footer.
+    - Style is also applied to the footer as it has been used as a selector in this first section.
+*/
+
+/* REFERENCE: https://css-tricks.com/couple-takes-sticky-footer/ */
+html, body {
+    margin: 0%; /* Remove all default borders set by browsers */
     font-family: sans-serif;
+    height: 100%
 }
+body {
+    display: flex; /* Set the display to flexbox (flexible box) */
+    flex-direction: column; /* Sets the flex direction to downwards, instead of across the page. */
+}
+#content {
+    flex: 1 0 auto; /* Short for flex-grow, flex-shrink, flex-basis */
+    margin-bottom: 20px; /* A static unit of measurement is used to ensure the same gap at the bottom of each page's content */
+}
+footer {
+    flex-shrink: 0; /* States the relative ability to shrink based on the width of other items */
+    background-color: #34516c;
+    display: flex; /* Enable flexbox within the footer container */
+    justify-content: space-around; /* Ensure the items are equally spaced. */
+    flex-wrap: wrap; /* Allow containers to move to a new row if there is insufficient space */
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    color: white;
+}
+footer p {
+    margin: 0%;
+}
+
+/*
+This section of CSS is used to style the header of each page
+*/
 #header { /* Style the header of the page
     Static units of measurement are used to keep the banner 
     of a consistent height when the width of the page changes.
@@ -20,64 +52,41 @@ body { /* Globally apply some settings in the website */
     padding-top: 20px;
     box-shadow: 0px 0px 10px 0px;
     margin-bottom: 10px;
-    overflow: hidden;
-    display: inline-block;
     height: 100px;
 }
 #uclan_logo { /* Manage default sizing of the logo image */
-    float: left;
+    float: left; /* Moves the logo to the left, relative to other content in the header */
     max-height: 75px;
-    position: static;
     transform: translateY(0%) translateX(5%);
-    margin-right: 50px;
+    margin-right: 50px; /* Add a static gap between the image and the title in the header */
 }
 #title {
     color: white;
     transform: translateY(15%);
-    font-size: 1.5em;
+    font-size: 1.5em; /* Em is a relative font size unit of measurement */
 }
-
 /* Set the default, PC-based behaviour of the navigation menu */
 nav {
     width: 20%;
-    float: right;
+    float: right; /* Place the navigation menu on the right of the header, relative to other elements */
     transform: translateY(-200%);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Equally space items in the navigation menu */
     margin-right: 2.5%;
 }
 #mobileMenu { /* Hide the hamburger menu by default */
     display: none;
-    float: right;
+    float: right; /* Same placement as navigation menu */
 }
-nav a { /* Set behaviour of links */
+nav a { /* Set behaviour of links (exclusively in the navigation menu) */
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Remove the underlines, usually imposed by browsers by default */
     font-size: 1.15em;
 }
 
 /* Other global features */
 a { /* Set the colour of all hyperlinks to the colour specified in the design requirements document */
     color: #007fb0;
-}
-
-/* Define default footer behaviour */
-footer {
-    background-color: #34516c;
-    display: flex;
-    justify-content: space-around;
-    bottom: 0%;
-    flex-wrap: wrap;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    margin-top: 2.5%;
-}
-footer h3 {
-    color: white;
-}
-footer p {
-    color: white;
-    margin: 0%;
 }
 
 /* Next, define the tablet bahaviour */
@@ -96,6 +105,9 @@ footer p {
     }
     nav a {
         font-size: 0.75em;
+    }
+    footer {
+        font-size: 0.75em; /* Reduce the size of the font on tablets */
     }
 }
 
