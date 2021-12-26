@@ -56,6 +56,11 @@ nav a { /* Set behaviour of links */
     font-size: 1.15em;
 }
 
+/* Other global features */
+a { /* Set the colour of all hyperlinks to the colour specified in the design requirements document */
+    color: #007fb0;
+}
+
 /* Define default footer behaviour */
 footer {
     background-color: #34516c;
@@ -73,9 +78,6 @@ footer h3 {
 footer p {
     color: white;
     margin: 0%;
-}
-footer a:not(:visited) {
-    color: #007fb0;
 }
 
 /* Next, define the tablet bahaviour */
