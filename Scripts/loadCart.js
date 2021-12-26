@@ -55,12 +55,24 @@ function createRow(itemKey, localStorageValue) {
     tableContainer.appendChild(rowContainer);
 }
 
-window.onload = function() {
+window.onload = function() 
+{
     tableContainer = document.getElementById("table");
     const storageKeys = Object.keys(localStorage).sort();
-    for (const key in storageKeys) {
-        const itemKey = storageKeys[key];
-        const itemValue = localStorage.getItem(itemKey);
-        createRow(itemKey, itemValue);
+    if (storageKeys.length < 1)
+    {
+        const noItemsNotifier = document.createElement("p");
+        noItemsNotifier.setAttribute("class", "noItems");
+        noItemsNotifier.innerHTML = "There are no items in your cart!";
+        tableContainer.append(noItemsNotifier);
+    }
+    else
+    {
+        for (const key in storageKeys) 
+        {
+            const itemKey = storageKeys[key];
+            const itemValue = localStorage.getItem(itemKey);
+            createRow(itemKey, itemValue);
+        }
     }
 };
