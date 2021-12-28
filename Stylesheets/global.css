@@ -14,7 +14,7 @@ The first section of CSS is used to define the sticky footer.
 html, body {
     margin: 0%; /* Remove all default borders set by browsers */
     font-family: sans-serif;
-    height: 100%
+    height: 100%;
 }
 body {
     display: flex; /* Set the display to flexbox (flexible box) */
@@ -89,7 +89,7 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
     color: #007fb0;
 }
 
-/* Next, define the tablet bahaviour */
+/* Next, define the tablet bahaviour (font and image size changes) */
 @media screen and (max-width: 768px) {
     #uclan_logo {
         max-height: 50px;
@@ -99,9 +99,6 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
     }
     #header {
         height: 75px;
-    }
-    nav {
-        justify-content: space-between;
     }
     nav a {
         font-size: 0.75em;
@@ -115,8 +112,9 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
 @media screen and (max-width: 480px) {
     #uclan_logo {
         max-height: 90%;
-        transform: translateY(-20%) translateX(5%);
-        margin-right: 7.5%;
+        transform: translateY(-20%);
+        margin-left: 2.5%;
+        margin-right: 5%;
     }
     #title {
         font-size: 0.75em;
@@ -124,18 +122,28 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
     }
     #header {
         height: 50px;
+        margin-bottom: 50px; /* The gap has been increased to compensate for the height of the menu height on mobile-sized devices */
     }
     #mobileMenu {
-        display: inline-block;
-        transform: translateY(-120%);
+        display: block; /* Make the hamburger menu visible for mobile-sized devices */
+        transform: translateY(-120%); /* Vertically move the hamburger menu */
         margin-right: 5%;
     }
     nav {
-        display: none;
+        display: none; /* This will be the default display value, DOM manipulation will allow inline CSS override. */
+        float: none; /* The right float must be removed to ensure the display of the menu is proper */
+        background-color: #c4c7d7;
+        position: relative; /* Relative positioning is needed to ensure the menu is displayed correctly */
+        top: 100%; /* This property will ensure the top of the menu is after 100% of the header */
+        width: 100%; /* Overrides existing width from 20% to span the whole screen. */
+        justify-content: space-around; /* Space out each menu button equally */
+        padding-top: 10px; /* Padding on vertical sides makes the links more prominent when visible,
+        separate properties have to be used, as using exclusively 'padding' applies to horizontal axes */
+        padding-bottom: 10px;
     }
     footer div {
-        margin-left: 5%;
-        flex: 100%; /* https://www.w3schools.com/cssref/css3_pr_flex.asp */
+        margin-left: 5%; /* Ensure proper spacing of the footer elements */
         margin-bottom: 5%;
+        flex: 100%; /* https://www.w3schools.com/cssref/css3_pr_flex.asp */
     }
 }
