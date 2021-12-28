@@ -6,7 +6,7 @@
 */
 #main { /* The div has horizontal margins set to auto & width set to place it in the middle. */
     margin: auto;
-    max-width: 60%;
+    width: 60%;
 }
 h1 { /* The vertical margins are manipulated to make the primary heading more prominent on the page. */
     color: #34516c;
@@ -31,4 +31,12 @@ h1 { /* The vertical margins are manipulated to make the primary heading more pr
     width: 100%;
     height: 100%;
     border: none;
+}
+/*
+Change content width on mobile-size devices
+*/
+@media screen and (max-width: 480px) {
+    #main {
+        width: 80%;
+    }
 }
