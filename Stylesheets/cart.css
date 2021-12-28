@@ -36,7 +36,7 @@ the UCLan 'brand'.
       the website.
 */
 button {
-    width: 50%;
+    width: 70%;
     color: #be1622;
     border: 2px solid #be1622;
     background-color: white;
@@ -65,10 +65,13 @@ not as consistent as those for divs
 }
 
 /*
-Increase width of rows on mobile-sized devices.
+Increase width of rows and change button font on mobile-sized devices.
 */
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     #main {
         width: 95%;
+    }
+    button {
+        font-size: 2vw;
     }
 }
