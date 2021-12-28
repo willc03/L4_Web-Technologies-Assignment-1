@@ -18,13 +18,13 @@
 
     <body> <!-- Content in the body is visible to the user -->
         <div id="content">
-            <div id="header"> <!-- Defines the top of the page -->
+            <div id="header"> <!-- Defines the top of the page, visible on all pages -->
                 <a href="index.html"> <!-- Allows the UCLan logo to act as a button -->
                     <img id="uclan_logo" src="../Images/uclan_logo.png" alt="University of Central Lancashire Logo">
                 </a>
                 <h2 id="title">Student Shop</h2>
-                <input type="image" id="mobileMenu" src="../Images/HamburgerMenu.svg" onclick="onMenuMouseDown()" alt="Menu toggle">
-                <nav id="navigation">
+                <input type="image" id="mobileMenu" src="../Images/HamburgerMenu.svg" onclick="onMenuMouseDown()" alt="Menu toggle"> <!-- Create the hamburger menu for mobile-sized devices -->
+                <nav id="navigation"> <!-- Create anchors and container for all navigation. -->
                     <a href="index.html">Home</a>
                     <a href="products.html">Products</a>
                     <a href="cart.html">Cart</a>
@@ -45,7 +45,7 @@
         </div>
 
         <footer id="footer"> <!-- Defines the bottom of the page, containing all information about the website and company. -->
-            <div class="Links">
+            <div class="Links"> <!-- All sections are placed into containers to make flexbox consistent on all screen sizes -->
                 <h3 class="category">Links</h3>
                 <a href="https://www.uclansu.co.uk">Student's Union</a>
             </div>
@@ -56,7 +56,7 @@
             </div>
             <div class="Location">
                 <h3 class="category">Location</h3>
-                <p>University of Central Lancashire Student's Union</p>
+                <p>University of Central Lancashire Student's Union</p> <!-- Paragraph styling has been applied so all of these paragraphs appear as an address -->
                 <p>Fylde Road, Preston, PR1 7BY</p>
                 <p>Registered in England</p>
                 <p>Company Number: 7623917</p>
