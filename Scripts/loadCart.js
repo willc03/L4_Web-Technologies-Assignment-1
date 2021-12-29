@@ -1,34 +1,37 @@
 /*
     Author: Will Corkill
     Name: loadCart.js
-    Last Accessed: 24/12/2021
+    Last Accessed: 29/12/2021
     Description: Manipulate the DOM to display all products in the cart.
 */
 const prices = {Hoodie: "£39.99", Jumper: "£29.99", Tshirt: "£19.99"}
 var rowId = 0;
 var tableContainer; // A variable made to be updated, as the page needs to be loaded before using document based functions.
-function parseValue(localStorageValue) { // Used to split the value up into different elements in an array.
+function parseValue(localStorageValue) 
+{ // Used to split the value up into different elements in an array.
     return localStorageValue.split(',');
 }
 
-function removeFromCart(containerId, itemIdentifier) {
-    localStorage.removeItem(itemIdentifier);
+function removeFromCart(containerId, itemIdentifier) 
+{
+    localStorage.removeItem(itemIdentifier); // Remove the item from localStorage
     const container = document.getElementById(containerId);
-    container.remove();
+    container.remove(); // Remove the item from cart.html
 }
 
-function createRow(itemKey, localStorageValue) {
+function createRow(itemKey, localStorageValue) 
+{
     // Gather all information needed to create the row in the list.
-    const productInfo = parseValue(localStorageValue);
-    const productType = productInfo[0];
+    const productInfo = parseValue(localStorageValue); // Split the value into two separate values in an array
+    const productType = productInfo[0]; // Index the array of values to ascertain the product type and product colour
     const productColour = productInfo[1];
     // Create the container for the row
     const rowContainer = document.createElement("div");
     rowContainer.className = "row";
-    rowContainer.setAttribute("id", `row${rowId}`)
+    rowContainer.id = `row${rowId}`;
     // Create item identifier to be presented to the user
     const itemIdentifier = document.createElement("p");
-    itemIdentifier.textContent = itemKey.slice(-1);
+    itemIdentifier.textContent = itemKey.slice(-1); // Index the final character in the itemKey
     rowContainer.appendChild(itemIdentifier);
     // Show the user an image
     const itemImage = document.createElement("img");
@@ -51,15 +54,15 @@ function createRow(itemKey, localStorageValue) {
     removeItem.setAttribute(`onclick` ,`removeFromCart("row${rowId}", "${itemKey}")`);
     removeContainer.appendChild(removeItem);
     // Add the container to the table
-    rowId++;
+    rowId++; // Increment the value of rowId
     tableContainer.appendChild(rowContainer);
 }
 
 window.onload = function() 
 {
     tableContainer = document.getElementById("table");
-    const storageKeys = Object.keys(localStorage).sort();
-    if (storageKeys.length < 1)
+    const storageKeys = Object.keys(localStorage).sort(); // Sort the keys into alphabetical order
+    if (storageKeys.length < 1) // If there are no items in the cart
     {
         const noItemsNotifier = document.createElement("p");
         noItemsNotifier.setAttribute("class", "noItems");
@@ -67,7 +70,7 @@ window.onload = function()
         tableContainer.append(noItemsNotifier);
     }
     else
-    {
+    { // If there are one or more items in the cart
         for (const key in storageKeys) 
         {
             const itemKey = storageKeys[key];
