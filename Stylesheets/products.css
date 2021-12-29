@@ -77,18 +77,18 @@ when pressed by the end-user.
 #top_scroller {
     border-radius: 50%; /* Used to make the button round */
     padding: 2%; /* Padding is needed to make the button more prominent */
-    background-color: #577a9b;
+    background-color: #34516C;
     position: fixed; /* A fixed position is used to keep the button on the screen at all times */
     left: 10px; /* A static unit of measurement has been used as only a small inset is required */
     top: 45%; /* Dictate how far from the top of the screen the button should be placed */
     color: white;
     border: none;
     transition-duration: 0.5s;
-    border: 0px solid #577a9b;
+    border: 0px solid #34516C;
 }
 #top_scroller:hover {
-    color: #577a9b;
-    border: 2px solid #577a9b;
+    color: #34516C;
+    border: 2px solid #34516C;
     background-color: white;
 }
 
