@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: global.css (Formerly HeaderFooter.css)
-    Last Accessed: 28/12/2021
+    Last Accessed: 29/12/2021
     Description: Set some global information for the website, as well as the header and footer for each page.
 */
 /* 
@@ -74,7 +74,7 @@ nav {
     justify-content: space-around; /* Equally space items in the navigation menu */
     margin-right: 2.5%;
 }
-#mobileMenu { /* Hide the hamburger menu by default */
+#hamburger_menu { /* Hide the hamburger menu by default */
     display: none;
     float: right; /* Same placement as navigation menu */
 }
@@ -124,7 +124,7 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
         height: 50px;
         margin-bottom: 50px; /* The gap has been increased to compensate for the height of the menu height on mobile-sized devices */
     }
-    #mobileMenu {
+    #hamburger_menu {
         display: block; /* Make the hamburger menu visible for mobile-sized devices */
         transform: translateY(-120%); /* Vertically move the hamburger menu */
         margin-right: 5%;

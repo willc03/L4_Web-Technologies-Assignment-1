@@ -1,19 +1,18 @@
 /*
     Author: Will Corkill
     Name: index.css
-    Last Accessed: 20/12/2021
+    Last Accessed: 29/12/2021
     Description: Style the index.html webpage.
 */
-#main { /* The div has horizontal margins set to auto & width set to place it in the middle. */
+#main { /* The div has horizontal margins set to auto & width set to place content in the middle. */
     margin: auto;
     width: 60%;
 }
 h1 { /* The vertical margins are manipulated to make the primary heading more prominent on the page. */
     color: #34516c;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    margin: 3.5% 0%; /* Two measurements are given as to apply a margin exclusively to vertical axes. */
 }
-#main h2 { /* Set all subtitles with a yellow colour from the given colour scheme */
+#main h2 { /* Set all subheadings (h2) with a yellow colour from the given colour scheme */
     position: static;
     color: #f2be1a;
 }
@@ -32,9 +31,8 @@ h1 { /* The vertical margins are manipulated to make the primary heading more pr
     height: 100%;
     border: none;
 }
-/*
-Change content width on mobile-size devices
-*/
+
+/* Change content width on mobile-size devices, as more space is needed to fit content */
 @media screen and (max-width: 480px) {
     #main {
         width: 80%;
