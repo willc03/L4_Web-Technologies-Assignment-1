@@ -168,7 +168,7 @@ function generateProductDiv(productContainer, productType, productColour, showRe
     var purchaseButton = document.createElement("input");
     purchaseButton.type = "button";
     purchaseButton.value = "Buy";
-    purchaseButton.setAttribute("id", "purchase_input");
+    purchaseButton.className = "purchaseButton";
     purchaseButton.setAttribute("onclick", `addToCart("${productType}", "${productColour}")`); // Temporarily use readMore here instead of addToCart
     productDiv.appendChild(purchaseButton);
     // Place the div on the page
