@@ -39,7 +39,7 @@ img:not(#uclan_logo) {
     margin-left: 5%;
     padding-right: 100%;
 }
-#purchase_input {
+.purchaseButton {
     width: 25%;
     color: #be1622;
     border: 2px solid #be1622;
@@ -49,7 +49,7 @@ img:not(#uclan_logo) {
     display: block;
     margin: 5% auto 5%;
 }
-#purchase_input:hover {
+.purchaseButton:hover {
     background-color: #be1622;
     color: white;
 }
