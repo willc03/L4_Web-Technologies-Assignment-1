@@ -1,20 +1,32 @@
-
-img:not(#uclan_logo) {
+/*
+    Author: Will Corkill
+    Name: products.css
+    Last Accessed: 29/12/2021
+    Description: Style the product containers on products.html
+*/
+img:not(#uclan_logo) { /* Applies to all images that are not the header logo, ensures the images stay within the container */
     width: 100%;
 }
 #quick_scroller {
     width: 100%; /* Preserve the list of products by manually setting the width to 100% */
 }
+
 #main { /* Make a single column in the centre of the page to place all main content */
     width: 65%;
     margin: auto;
 }
-#Hoodie, #Jumper, #Tshirt {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+#main a { /* Applies CSS to the 'Read more...' anchor tags */
+    font-size: 0.8em;
+    margin-left: 5%;
+}
+
+#Hoodie, #Jumper, #Tshirt { /* The containers for each type of product, which can be scrolled to by the browser */
+    display: flex; /* The products will be displayed using flexbox, as this is an effective method of creating a table. */
+    flex-wrap: wrap; /* Using flex-wrap will ensure that products exceeding the bounds of the container are moved to a new row */
+    justify-content: space-evenly; /* Ensures all products of any type have consistent spacing */
     margin: auto;
 }
+
 /* Set the style of the product containers */
 .productContainer {
     width: 25%;
@@ -26,18 +38,18 @@ img:not(#uclan_logo) {
     color: #f2be1a;
     margin: 0% 5%;
 }
-.productContainer h2:not(:last-of-type) {
+.productContainer h2:first-of-type {
+    /* Using pseudo-classes allows the CSS separating the border from the 
+       text to be applied only to the top child of the specified type. */
     margin-top: 5%;
 }
 .productDescription {
    font-size: 0.8em;
-   margin-left: 5%;
-   margin-right: 5%;
-   text-align: justify; 
+   margin: 5%;
+   text-align: justify; /* Ensure the text occupies the whole line. */
 }
 .productPrice {
     margin-left: 5%;
-    padding-right: 100%;
 }
 .purchaseButton {
     width: 25%;
@@ -45,17 +57,13 @@ img:not(#uclan_logo) {
     border: 2px solid #be1622;
     background-color: white;
     border-radius: 5px;
-    transition-duration: 0.5s;
+    transition-duration: 0.5s; /* The duration of the transition when hovered */
     display: block;
-    margin: 5% auto 5%;
+    margin: 5% auto 5%; /* Centre the button */
 }
-.purchaseButton:hover {
+.purchaseButton:hover { /* The use of the pseudo-class only applies the CSS when the element is hovered over */
     background-color: #be1622;
     color: white;
-}
-#main a {
-    font-size: 0.8em;
-    margin-left: 5%;
 }
 .new_line::after { /* https://www.educative.io/edpresso/how-to-add-a-line-break-using-css */
     content: "\a\a";
