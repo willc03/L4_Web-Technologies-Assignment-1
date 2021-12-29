@@ -132,7 +132,7 @@ const products = {
 function generateProductDiv(productContainer, productType, productColour, showReadMore) {
     // Create a div to store the product information in
     var productDiv = document.createElement("div");
-    productDiv.setAttribute("class", "productContainer");
+    productDiv.className = "productContainer";
     // Create an image tag to show the corresponding image for the colour
     var productImage = document.createElement("img");
     productImage.src = `../Images/${productType}/${productColour}.jpg`;
@@ -147,7 +147,7 @@ function generateProductDiv(productContainer, productType, productColour, showRe
     productDiv.appendChild(productColourHeading);
     // Add a paragraph to contain the description
     var productDescription = document.createElement("p");
-    productDescription.setAttribute("class", "productDescription");
+    productDescription.className = "productDescription";
     productDescription.textContent = products[productType].description;
     productDiv.appendChild(productDescription);
     // Add an anchor tag to 'read more' about the item
@@ -155,13 +155,13 @@ function generateProductDiv(productContainer, productType, productColour, showRe
         var productReadMore = document.createElement("a");
         productReadMore.innerHTML = "Read more...";
         productReadMore.href = "./item.html";
+        productReadMore.className = "new_line";
         productReadMore.setAttribute("onclick", `readMore("${productType}", "${productColour}")`);
-        productReadMore.setAttribute("class", "new_line");
         productDiv.appendChild(productReadMore);
     }
     // Add a strong tag to emphasise the price of the item
     var productPrice = document.createElement("strong");
-    productPrice.setAttribute("class", "productPrice");
+    productPrice.className = "productPrice";
     productPrice.textContent = products[productType].price;
     productDiv.appendChild(productPrice);
     // Add a button to add the product to the cart
@@ -194,7 +194,7 @@ window.onload = function() {
     will  be  used  to  change  the  behaviour based on the page's name.
     */
     var currentPageName = location.href.split("/").slice(-1);
-    if (currentPageName[0].search("products.html") != -1)
+    if (currentPageName[0].search("products.html") != -1) // -1 in this case indicates if the search term was not found
     {
         for (const productType in products) {
             products[productType].colors.forEach(function(colour) {
