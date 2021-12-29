@@ -5,7 +5,8 @@
     Description: Manipulate the DOM to toggle the menu display
 */
 var isVisible = false; // The menu will not be visible by default.
-function onMenuMouseDown() {
+function onMenuMouseDown() 
+{
     if (!isVisible)
     {
         document.getElementById('navigation').style.display = "flex";
