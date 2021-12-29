@@ -66,8 +66,8 @@ The design requirements state that the following must apply to the assessment re
 | Basic implementation of the shopping cart |  |  | / | / | Yes |
 | HTML5 API integration |  |  |  | / | Yes |
 | Extended feature to the shopping cart |  |  |  | / | Yes |
-| No significant accessibility flaws |  |  |  | / |  |
-| A professional looking prototype with no significant usability flaws |  |  |  | / |  |
+| No significant accessibility flaws |  |  |  | / | Yes |
+| A professional looking prototype with no significant usability flaws |  |  |  | / | Yes |
 | The adoption of version control with regular, quality commits to demonstrate progress |  |  |  | / | Yes |
 
 # Assessment Response
