@@ -10,9 +10,9 @@ The design requirements state that the following must apply to the assessment re
 
 ### Form (Design)
  - [x] The website contains the logo on all views
- - [ ] The application is given a name
+ - [x] The application is given a name
  - [x] Provide a navigational menu to access all views within the application
- - [ ] Follow the University's brand guidelines for primary colours palette *see Figure One*.
+ - [x] Follow the University's brand guidelines for primary colours palette *see Figure One*.
  - [x] Use the primary colour for main branding of the application *#BE1622*
  - [x] *#007FB0* for hyperlinks
  - [x] *#34516C* for secondary elements (such as the sidebar and footer)
@@ -120,6 +120,7 @@ JavaScript was used to retrieve the localStorage and display this information to
 - The footer contains a href to the UCLan Student's Union
 	- The footer contains a mailto href to open the user's web client to the Student Union email.
 	- The footer contains a tel href to open the user's phone client to phone the UCLan Student's Union
+- The application is given the name "UCLan Student's Union Shop"
 
 # Written by Will Corkill
 Furness College Student ID: 40019692
