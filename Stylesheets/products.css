@@ -96,9 +96,6 @@ when pressed by the end-user.
 @media screen and (max-width: 768px) {
     .productContainer {
         width: 40%;
-        margin: 1.5%;
-        border: 2px solid #f3f3f3;
-        background-color: #f3f3f3;
     }
 }
 
@@ -106,9 +103,6 @@ when pressed by the end-user.
 @media screen and (max-width: 480px) {
     .productContainer {
         width: 85%;
-        margin: 1.5%;
-        border: 2px solid #f3f3f3;
-        background-color: #f3f3f3;
     }
     #main {
         width: 80%; /* This increases the width of the content on mobile-sized devices */
