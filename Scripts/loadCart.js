@@ -36,6 +36,7 @@ function createRow(itemKey, localStorageValue)
     // Show the user an image
     const itemImage = document.createElement("img");
     itemImage.src = `../Images/${productType}/${productColour}.jpg`;
+    itemImage.alt = `Photo of a ${productColour} ${productType}`;
     rowContainer.appendChild(itemImage);
     // Show the product name
     const itemName = document.createElement("p");

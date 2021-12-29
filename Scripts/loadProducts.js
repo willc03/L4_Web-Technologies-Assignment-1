@@ -136,6 +136,7 @@ function generateProductDiv(productContainer, productType, productColour, showRe
     // Create an image tag to show the corresponding image for the colour
     var productImage = document.createElement("img");
     productImage.src = `../Images/${productType}/${productColour}.jpg`;
+    productImage.alt = `Photo of a ${productColour} ${productType}`
     productDiv.appendChild(productImage);
     // Add a heading for the product type
     var productTypeHeading = document.createElement("h2");
