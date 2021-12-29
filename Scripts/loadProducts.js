@@ -178,13 +178,13 @@ function generateProductDiv(productContainer, productType, productColour, showRe
 function readMore(productType, productColour) { // Function to allow the user to access item.html through a read more button.
     sessionStorage.setItem(`UCLAN_STORE_PRODUCT_TYPE`, productType);
     sessionStorage.setItem(`UCLAN_STORE_PRODUCT_COLOUR`, productColour);
-    window.location.href = `../Pages/item.html`;
+    window.location.href = `../Pages/item.html`; // Redirect the user to the item page once the sessionStorage has been set
 }
 function addToCart(productType, productColour) {
     // Function to be written for adding to the cart
     const numberOfKeys = Object.keys(localStorage).length;
-    localStorage.setItem(`item${numberOfKeys}`, `${productType},${productColour}`);
-    alert(`${productColour} ${productType} has been added to your cart.`);
+    localStorage.setItem(`item${numberOfKeys+1}`, `${productType},${productColour}`); // The item in the local storage is assigned to be used on cart.html and loadCart.js
+    alert(`${productColour} ${productType} has been added to your cart.`); // Show an alert informing the user of the addition to their cart.
 }
 
 window.onload = function() {
