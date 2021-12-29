@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: loadProducts.js
-    Last Accessed: 17/12/2021
+    Last Accessed: 29/12/2021
     Description: Manipulate the DOM to display all products in divs.
 */
 // A collection of JavaScript "Objects" are used to store information based on the provided CSV list

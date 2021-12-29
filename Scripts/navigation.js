@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: navigation.js
-    Last Accessed: 24/11/2021
+    Last Accessed: 29/12/2021
     Description: Manipulate the DOM to toggle the menu display
 */
 var isVisible = false; // The menu will not be visible by default.
