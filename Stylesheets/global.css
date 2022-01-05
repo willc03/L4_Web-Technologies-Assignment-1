@@ -81,7 +81,7 @@ nav {
 nav a { /* Set behaviour of links (exclusively in the navigation menu) */
     color: white;
     text-decoration: none; /* Remove the underlines, usually imposed by browsers by default */
-    font-size: 1.15em;
+    font-size: 1.2vw;
 }
 
 /* Other global features */
@@ -101,7 +101,7 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
         height: 75px;
     }
     nav a {
-        font-size: 0.75em;
+        font-size: 1.5vw;
     }
     footer {
         font-size: 0.75em; /* Reduce the size of the font on tablets */
