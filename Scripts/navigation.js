@@ -18,7 +18,7 @@ window.onload = function() {
             headerContainer.appendChild(navigationElement); // Move the container back to the header
         }
     }
-    mediaQuery.addEventListener("change", onMediaQueryStatusChange); // Connect the listener
+    mediaQuery.addEventListener("change", onMediaQueryStatusChange); // Connect the listener https://www.designcise.com/web/tutorial/what-is-the-substitute-for-the-deprecated-matchmedia-addlistener-method
     onMediaQueryStatusChange(mediaQuery) // Run the listener when the page loads to ensure continuity.
     
 }
