@@ -15,6 +15,7 @@ html, body {
     margin: 0%; /* Remove all default borders set by browsers */
     font-family: sans-serif;
     height: 100%;
+    overflow-x: hidden; /* Keeps the content from shrinking exponentially at extremely small sizes */
 }
 body {
     display: flex; /* Set the display to flexbox (flexible box) */
@@ -111,7 +112,7 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
 /* Finally, define the mobile behaviour */
 @media screen and (max-width: 480px) {
     #uclan_logo {
-        max-height: 90%;
+        max-width: 30%;
         transform: translateY(-20%);
         margin-left: 2.5%;
         margin-right: 5%;
@@ -133,13 +134,16 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
         display: none; /* This will be the default display value, DOM manipulation will allow inline CSS override. */
         float: none; /* The right float must be removed to ensure the display of the menu is proper */
         background-color: #c4c7d7;
-        position: relative; /* Relative positioning is needed to ensure the menu is displayed correctly */
-        top: 100%; /* This property will ensure the top of the menu is after 100% of the header */
+        position:static; /*relative; /* Relative positioning is needed to ensure the menu is displayed correctly */
         width: 100%; /* Overrides existing width from 20% to span the whole screen. */
         justify-content: space-around; /* Space out each menu button equally */
         padding-top: 10px; /* Padding on vertical sides makes the links more prominent when visible,
         separate properties have to be used, as using exclusively 'padding' applies to horizontal axes */
         padding-bottom: 10px;
+        transform: translateY(-60%);
+    }
+    nav a {
+        font-size: 2.5vw;
     }
     footer div {
         margin-left: 5%; /* Ensure proper spacing of the footer elements */
