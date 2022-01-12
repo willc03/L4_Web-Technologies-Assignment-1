@@ -188,25 +188,22 @@ function addToCart(productType, productColour) {
     alert(`${productColour} ${productType} has been added to your cart.`); // Show an alert informing the user of the addition to their cart.
 }
 
-window.onload = function() {
+window.addEventListener("load", function() {
     /*
     The script will be used on multiple pages,  the start behaviour will
     be  different  on  the  products  and item pages, so an if statement
     will  be  used  to  change  the  behaviour based on the page's name.
     */
     var currentPageName = location.href.split("/").slice(-1);
-    if (currentPageName[0].search("products.html") != -1) // -1 in this case indicates if the search term was not found
-    {
+    if (currentPageName[0].search("products.html") != -1) { // -1 in this case indicates if the search term was not found
         for (const productType in products) {
             products[productType].colors.forEach(function(colour) {
                 const productContainer = document.getElementById(productType);
                 generateProductDiv(productContainer, productType, colour, true);
             });
         };
-    }
-    else
-    {
+    } else {
         const productContainer = document.getElementById("main");
         generateProductDiv(productContainer, sessionStorage.getItem("UCLAN_STORE_PRODUCT_TYPE"), sessionStorage.getItem("UCLAN_STORE_PRODUCT_COLOUR"), false);
     }
-};
+});

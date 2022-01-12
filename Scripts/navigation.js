@@ -5,7 +5,7 @@
     Description: Manipulate the DOM to toggle the menu display, move navigation based on screen size.
 */
 var isWindowLoaded = false; // Explained on line 29
-window.onload = function() {
+window.addEventListener("load", function() {
     isWindowLoaded = true;
     const mediaQuery = window.matchMedia("(max-width: 480px)"); // https://css-tricks.com/working-with-javascript-media-queries/
     const navigationElement = document.getElementById("navigation"); // Define the necessary elements for the page
@@ -19,9 +19,8 @@ window.onload = function() {
         }
     }
     mediaQuery.addEventListener("change", onMediaQueryStatusChange); // Connect the listener https://www.designcise.com/web/tutorial/what-is-the-substitute-for-the-deprecated-matchmedia-addlistener-method
-    onMediaQueryStatusChange(mediaQuery) // Run the listener when the page loads to ensure continuity.
-    
-}
+    onMediaQueryStatusChange(mediaQuery) // Run the listener when the page loads to ensure continuity. 
+});
 
 var isVisible = false; // The menu will not be visible by default.
 function onMenuMouseDown() {

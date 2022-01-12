@@ -59,8 +59,7 @@ function createRow(itemKey, localStorageValue)
     tableContainer.appendChild(rowContainer);
 }
 
-window.onload = function() 
-{
+window.addEventListener("load", function() {
     tableContainer = document.getElementById("table");
     const storageKeys = Object.keys(localStorage).sort(); // Sort the keys into alphabetical order
     if (storageKeys.length < 1) // If there are no items in the cart
@@ -79,4 +78,4 @@ window.onload = function()
             createRow(itemKey, itemValue);
         }
     }
-};
+});
