@@ -62,7 +62,7 @@ The design requirements state that the following must apply to the assessment re
 | Best practice for CSS |  | / | / | / | Yes |
 | Manipulating the DOM |  |  | / | / | Yes |
 | Advanced responsive design considerations |  |  | / | / | Yes |
-| HTML5 semantic elements |  |  | / | / |  |
+| HTML5 semantic elements |  |  | / | / | Yes |
 | Basic implementation of the shopping cart |  |  | / | / | Yes |
 | HTML5 API integration |  |  |  | / | Yes |
 | Extended feature to the shopping cart |  |  |  | / | Yes |
