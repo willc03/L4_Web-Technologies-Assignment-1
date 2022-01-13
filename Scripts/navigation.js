@@ -1,13 +1,13 @@
 /*
     Author: Will Corkill
     Name: navigation.js
-    Last Accessed: 12/01/2022
+    Last Accessed: 13/01/2022
     Description: Manipulate the DOM to toggle the menu display, move navigation based on screen size.
 */
 var isWindowLoaded = false; // Explained on line 29
 window.addEventListener("load", function() {
     isWindowLoaded = true;
-    const mediaQuery = window.matchMedia("(max-width: 480px)"); // https://css-tricks.com/working-with-javascript-media-queries/
+    const mediaQuery = window.matchMedia("(max-width: 480px)"); // (Ilik, 2020) regarding media queries
     const navigationElement = document.getElementById("navigation"); // Define the necessary elements for the page
     const mobileNavigationContainer = document.getElementById("mobileNavigationContainer");
     const headerContainer = document.getElementById("header");
@@ -18,7 +18,7 @@ window.addEventListener("load", function() {
             headerContainer.appendChild(navigationElement); // Move the container back to the header
         }
     }
-    mediaQuery.addEventListener("change", onMediaQueryStatusChange); // Connect the listener https://www.designcise.com/web/tutorial/what-is-the-substitute-for-the-deprecated-matchmedia-addlistener-method
+    mediaQuery.addEventListener("change", onMediaQueryStatusChange); // Connect the listener - (Hamid, 2021) regarding deprecated functions
     onMediaQueryStatusChange(mediaQuery) // Run the listener when the page loads to ensure continuity. 
 });
 

@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: item.css
-    Last Accessed: 29/12/2021
+    Last Accessed: 13/01/2022
     Description: Style the product containers as a larger container used on products.html
 */
 img:not(#uclan_logo) { /* Ensure the container's image stays within the bounds */
@@ -55,7 +55,7 @@ img:not(#uclan_logo) { /* Ensure the container's image stays within the bounds *
     color: white;
 }
 /* The next section is used to add a break in the content after the 'Read more...' text */
-.new_line::after { /* https://www.educative.io/edpresso/how-to-add-a-line-break-using-css */
+.new_line::after { /* (Edpresso Team, n.d.) regarding line-break */
     content: "\a\a";
     white-space: pre;
 }

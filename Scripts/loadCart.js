@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: loadCart.js
-    Last Accessed: 29/12/2021
+    Last Accessed: 13/01/2022
     Description: Manipulate the DOM to display all products in the cart.
 */
 const prices = {Hoodie: "£39.99", Jumper: "£29.99", Tshirt: "£19.99"};
@@ -35,7 +35,7 @@ function createRow(itemKey, localStorageValue)
     rowContainer.appendChild(itemIdentifier);
     // Show the user an image
     const itemImage = document.createElement("img");
-    itemImage.src = `../Images/${productType}/${productColour.replaceAll(" ", "%20")}.jpg`;
+    itemImage.src = `../Images/${productType}/${productColour.replaceAll(" ", "%20")}.jpg`; // (JavaScriptTutorial, n.d.) regarding replaceAll function
     itemImage.alt = `Photo of a ${productColour} ${productType}`;
     rowContainer.appendChild(itemImage);
     // Show the product name

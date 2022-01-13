@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: loadProducts.js
-    Last Accessed: 29/12/2021
+    Last Accessed: 13/01/2022
     Description: Manipulate the DOM to display all products in divs.
 */
 // A collection of JavaScript "Objects" are used to store information based on the provided CSV list
@@ -204,7 +204,7 @@ window.addEventListener("load", function() {
         }
     } else {
         const productContainer = document.getElementById("main");
-        window.document.title = `${sessionStorage.getItem("UCLAN_STORE_PRODUCT_COLOUR")} ${sessionStorage.getItem("UCLAN_STORE_PRODUCT_TYPE")} - UCLan Student's Union Shop`;
+        window.document.title = `${sessionStorage.getItem("UCLAN_STORE_PRODUCT_COLOUR")} ${sessionStorage.getItem("UCLAN_STORE_PRODUCT_TYPE")} - UCLan Student's Union Shop`; // (JavaScripter, 2011) regarding window title
         generateProductDiv(productContainer, sessionStorage.getItem("UCLAN_STORE_PRODUCT_TYPE"), sessionStorage.getItem("UCLAN_STORE_PRODUCT_COLOUR"), false);
     }
 });

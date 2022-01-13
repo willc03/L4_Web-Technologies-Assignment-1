@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: global.css (Formerly HeaderFooter.css)
-    Last Accessed: 12/01/2022
+    Last Accessed: 13/01/2022
     Description: Set some global information for the website, as well as the header and footer for each page.
 */
 /* 
@@ -10,7 +10,7 @@ The first section of CSS is used to define the display flex and margins for the 
     - Style is also applied to the footer as it has been used as a selector in this first section.
 */
 
-/* REFERENCE: https://css-tricks.com/couple-takes-sticky-footer/ */
+/* (Coyier, 2016) regarding the structure of a page for a sticky footer */
 html, body {
     margin: 0%; /* Remove all default borders set by browsers */
     font-family: sans-serif;
@@ -139,6 +139,6 @@ a { /* Set the colour of all hyperlinks to the colour specified in the design re
     footer div {
         margin-left: 5%; /* Ensure proper spacing of the footer elements */
         margin-bottom: 5%;
-        flex: 100%; /* https://www.w3schools.com/cssref/css3_pr_flex.asp */
+        flex: 100%; /* (w3schools, n.d. a) */
     }
 }

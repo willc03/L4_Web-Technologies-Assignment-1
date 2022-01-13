@@ -1,7 +1,7 @@
 /*
     Author: Will Corkill
     Name: products.css
-    Last Accessed: 29/12/2021
+    Last Accessed: 13/01/2022
     Description: Style the product containers on products.html
 */
 img:not(#uclan_logo) { /* Applies to all images that are not the header logo, ensures the images stay within the container */
@@ -65,7 +65,7 @@ img:not(#uclan_logo) { /* Applies to all images that are not the header logo, en
     background-color: #be1622;
     color: white;
 }
-.new_line::after { /* https://www.educative.io/edpresso/how-to-add-a-line-break-using-css */
+.new_line::after { /* (Edpresso Team, n.d.) regarding CSS line-break */
     content: "\a\a";
     white-space: pre;
 }
