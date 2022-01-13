@@ -204,6 +204,7 @@ window.addEventListener("load", function() {
         }
     } else {
         const productContainer = document.getElementById("main");
+        window.document.title = `${sessionStorage.getItem("UCLAN_STORE_PRODUCT_COLOUR")} ${sessionStorage.getItem("UCLAN_STORE_PRODUCT_TYPE")} - UCLan Student's Union Shop`;
         generateProductDiv(productContainer, sessionStorage.getItem("UCLAN_STORE_PRODUCT_TYPE"), sessionStorage.getItem("UCLAN_STORE_PRODUCT_COLOUR"), false);
     }
 });
