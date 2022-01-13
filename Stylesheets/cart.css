@@ -19,11 +19,11 @@ Media queries will be used to increase the width of items on smaller devices.
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .row p, .row strong {
     width: 100%;
     text-align: center;
-    transform: translateY(45%);
 }
 .row img {
     max-width: 20%;
