@@ -4,7 +4,7 @@
     Last Accessed: 29/12/2021
     Description: Manipulate the DOM to display all products in the cart.
 */
-const prices = {Hoodie: "£39.99", Jumper: "£29.99", Tshirt: "£19.99"}
+const prices = {Hoodie: "£39.99", Jumper: "£29.99", Tshirt: "£19.99"};
 var rowId = 0;
 var tableContainer; // A variable made to be updated, as the page needs to be loaded before using document based functions.
 function parseValue(localStorageValue) 

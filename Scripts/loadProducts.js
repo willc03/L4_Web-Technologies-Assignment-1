@@ -127,7 +127,7 @@ const products = {
             "White"
         ]
     }
-}
+};
 
 function generateProductDiv(productContainer, productType, productColour, showReadMore) {
     // Create a div to store the product information in
@@ -136,7 +136,7 @@ function generateProductDiv(productContainer, productType, productColour, showRe
     // Create an image tag to show the corresponding image for the colour
     var productImage = document.createElement("img");
     productImage.src = `../Images/${productType}/${productColour.replaceAll(" ", "%20")}.jpg`;
-    productImage.alt = `Photo of a ${productColour} ${productType}`
+    productImage.alt = `Photo of a ${productColour} ${productType}`;
     productDiv.appendChild(productImage);
     // Add a heading for the product type
     var productTypeHeading = document.createElement("h2");
@@ -201,7 +201,7 @@ window.addEventListener("load", function() {
                 const productContainer = document.getElementById(productType);
                 generateProductDiv(productContainer, productType, colour, true);
             });
-        };
+        }
     } else {
         const productContainer = document.getElementById("main");
         generateProductDiv(productContainer, sessionStorage.getItem("UCLAN_STORE_PRODUCT_TYPE"), sessionStorage.getItem("UCLAN_STORE_PRODUCT_COLOUR"), false);
