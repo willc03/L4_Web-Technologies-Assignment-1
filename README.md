@@ -122,6 +122,29 @@ JavaScript was used to retrieve the localStorage and display this information to
 	- The footer contains a tel href to open the user's phone client to phone the UCLan Student's Union
 - The application is given the name "UCLan Student's Union Shop"
 
+# References / Bibliography
+Coyier, C. (2016) Sticky Footer, Five Ways | CSS-Tricks - CSS-Tricks [Online]. Available at: https://css-tricks.com/couple-takes-sticky-footer/ [Accessed 26 December 2021].
+
+Edpresso Team. (n.d.) How to add a line-break using CSS. [Online]. Available at: https://www.educative.io/edpresso/how-to-add-a-line-break-using-css */ [Accessed 17 November 2021].
+
+Hamid, D. (2021) JavaScript matchMedia().addListener() Alternative - Designcise [Online]. Available at: https://www.designcise.com/web/tutorial/what-is-the-substitute-for-the-deprecated-matchmedia-addlistener-method [Accessed 12 January 2022].
+
+Ilik, M. (2020) Working with JavaScript Media Queries [Online]. Available at: https://css-tricks.com/working-with-javascript-media-queries/ [Accessed 12 January 2022].
+
+JavaScripter. (2011) JavaScript: window title [Online]. Available at: http://www.javascripter.net/faq/windowti.htm [Accessed 13 January 2022].
+
+JavaScriptTutorial. (n.d.) How to Replace All Occurrences of a Substring in a String [Online]. Available at: https://www.javascripttutorial.net/string/javascript-string-replace-all/ [Accessed 29 December 2021].
+
+Nikitha, N. (2018) How to use an image as a link in HTML? [Online]. Available at: https://www.tutorialspoint.com/How-to-use-an-image-as-a-link-in-HTML [Accessed 20 November 2021].
+
+RapidTables. (n.d.) mailto: HTML email link [Online]. Available at: https://www.rapidtables.com/web/html/mailto.html [Accessed 12 December 2021].
+
+W3Docs. (n.d.) How to Add Telephone Links with HTML [Online]. Available at: https://www.w3docs.com/snippets/html/how-to-add-telephone-links-with-html.html [Accessed 12 December 2021].
+
+w3schools (n.d. a) CSS flex property [Online]. Available at: https://www.w3schools.com/cssref/css3_pr_flex.asp [Accessed 18 November 2021].
+
+w3schools (n.d. b) onclick Event [Online]. Available at: https://www.w3schools.com/jsref/event_onclick.asp [Accessed 20 November 2021].
+
 # Written by Will Corkill
 Furness College Student ID: 40019692
 Furness College Email: 40019692@student.furness.ac.uk
