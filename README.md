@@ -22,7 +22,7 @@ The design requirements state that the following must apply to the assessment re
 ### Function (Implementation)
 
  - [x] The website should contain four views, index.html, products.html, cart.html, and item.html
- - [x] The item.html should only be accessible through clicking an item on the products view.
+ - [x] The item.html page should only be accessible through clicking an item on the products view.
  - [x] All products should be available on the products.html page
  - [x] There should be a video in the form of an embedded YouTube iFrame.
  - [x] Contain a README file outlining what webpages have been implemented and the operation of each page.
